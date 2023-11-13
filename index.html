@@ -1,39 +1,20 @@
-<!-- HTML code for storing a multitude of files without using a separate JS file -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Storage</title>
+    <title>File Downloads</title>
 </head>
 <body>
-    <!-- File storage container -->
-    <a href="https://github.com/Corcodila/Corcodila.github.io/blob/921b938300864585676260fa8d925d3da304fab1/cl.12_F3_P.Einstein-Consec._Transf.Lorentz.pdf" download>Download File </a>
-    <div id="fileStorage">
-        <!-- Placeholder for files -->
-    </div>
 
-    <script>
-        // Sample file data
-        const files = [
-            { name: 'image.jpg', size: '500KB' },
-            { name: 'document.pdf', size: '2MB' }
-        ];
+    <h1>Download Files</h1>
 
-        // Function to display files in the file storage container
-        function displayFiles() {
-            const fileStorage = document.getElementById('fileStorage');
+    <ul>
+        <!-- Replace the placeholder values with your GitHub username, repository name, and file paths -->
+        <li><a href="https://github.com/Corcodila/Corcodila.github.io/blob/921b938300864585676260fa8d925d3da304fab1/cl.12_F3_P.Einstein-Consec._Transf.Lorentz.pdf" download>Download File </a></li>
+        <li><a href="https://github.com/your-username/your-repository/raw/main/path/to/file2.pdf" download>File 2</a></li>
+        <li><a href="https://github.com/your-username/your-repository/raw/main/path/to/file3.txt" download>File 3</a></li>
+    </ul>
 
-            // Loop through files and create elements for each
-            files.forEach(file => {
-                const fileElement = document.createElement('div');
-                fileElement.innerText = `${file.name} - ${file.size}`;
-                fileStorage.appendChild(fileElement);
-            });
-        }
-
-        // Call the displayFiles function when the page loads
-        window.onload = displayFiles;
-    </script>
 </body>
 </html>
