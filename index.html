@@ -1,0 +1,39 @@
+<!-- HTML code for storing a multitude of files without using a separate JS file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Storage</title>
+</head>
+<body>
+    <!-- File storage container -->
+    <div id="fileStorage">
+        <!-- Placeholder for files -->
+    </div>
+
+    <script>
+        // Sample file data
+        const files = [
+            { name: 'file1.txt', size: '10KB' },
+            { name: 'image.jpg', size: '500KB' },
+            { name: 'document.pdf', size: '2MB' }
+        ];
+
+        // Function to display files in the file storage container
+        function displayFiles() {
+            const fileStorage = document.getElementById('fileStorage');
+
+            // Loop through files and create elements for each
+            files.forEach(file => {
+                const fileElement = document.createElement('div');
+                fileElement.innerText = `${file.name} - ${file.size}`;
+                fileStorage.appendChild(fileElement);
+            });
+        }
+
+        // Call the displayFiles function when the page loads
+        window.onload = displayFiles;
+    </script>
+</body>
+</html>
